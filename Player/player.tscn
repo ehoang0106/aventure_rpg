@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dlpagrxkkyq1w"]
+[gd_scene load_steps=15 format=3 uid="uid://dlpagrxkkyq1w"]
 
 [ext_resource type="Texture2D" uid="uid://dfyvhlgrhaw4d" path="res://Player/Sprites/ExamplePlayerSprite.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://cfji2ckce27ig" path="res://Player/Scripts/player.gd" id="1_4ntmi"]
 [ext_resource type="Script" uid="uid://rh0mn244n80q" path="res://Player/Scripts/player_state_machine.gd" id="3_btcbx"]
+[ext_resource type="Script" uid="uid://ckwk5vc1p3vad" path="res://Player/Scripts/state_idle.gd" id="4_gwnis"]
+[ext_resource type="Script" uid="uid://bcc1wgoa2xjlq" path="res://Player/Scripts/state_walk.gd" id="5_k53q1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_edjgo"]
 radius = 12.0
@@ -142,7 +144,7 @@ script = ExtResource("1_4ntmi")
 shape = SubResource("CircleShape2D_edjgo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, -20)
+position = Vector2(159, 83)
 texture = ExtResource("1_4flbx")
 hframes = 21
 
@@ -155,5 +157,7 @@ libraries = {
 script = ExtResource("3_btcbx")
 
 [node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("4_gwnis")
 
 [node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("5_k53q1")
