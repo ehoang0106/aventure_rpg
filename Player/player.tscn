@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlpagrxkkyq1w"]
+[gd_scene load_steps=13 format=3 uid="uid://dlpagrxkkyq1w"]
 
 [ext_resource type="Texture2D" uid="uid://dfyvhlgrhaw4d" path="res://Player/Sprites/ExamplePlayerSprite.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://cfji2ckce27ig" path="res://Player/Scripts/player.gd" id="1_4ntmi"]
+[ext_resource type="Script" uid="uid://rh0mn244n80q" path="res://Player/Scripts/player_state_machine.gd" id="3_btcbx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_edjgo"]
 radius = 12.0
@@ -151,6 +152,7 @@ libraries = {
 }
 
 [node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_btcbx")
 
 [node name="Idle" type="Node" parent="StateMachine"]
 
